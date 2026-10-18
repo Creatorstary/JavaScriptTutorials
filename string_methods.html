@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let word = 'dictionaries';
+
+    // toUpperCase()
+    console.log(word.toUpperCase())
+
+    // toLowerCase()
+    console.log(word.toLowerCase())
+
+
+    //startsWith()
+    console.log(word.startsWith('diction')); //true
+    console.log(word.startsWith('dicta')); //false
+
+    //endsWith()
+    console.log(word.endsWith('ies')) //true
+    console.log(word.endsWith('sries')) //false
+
+    //split()
+    let word2 = 'I have a book';
+    console.log(word2.split());
+    console.log(word2.split(' '));
+
+
+    // classwork
+    let sentence5 = 'i have a dictionary given to me by my mother.';
+    let sentenceResult = sentence5.replace('dictionary', 'DICTIONARY');
+    console.log(sentenceResult);
+
+    // substring(index, length)
+    console.log(word.substring(3, 7)); //(index start from 0, length start from 1)
+    console.log(word.substring(3, -7)); //'dic'
+
+    //substr(index, nums of chars)
+    console.log(word.substr(4, 6)); // 'ionari'
+    console.log(word.substr(-4, 2)); // 'ri'
+    console.log(word.substr(-4)); // 'ries'
+    
+    //slice()
+    console.log(word.slice(3, 7)); //'tion'
+    console.log(word.slice(-4)); //'ries'
+    
+    // replace(), replaceALL()
+    
+    
+
+</script>
+</html>

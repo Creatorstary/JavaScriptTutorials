@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="border-box p-[10px] h-150 flex justify-center items-center">
+
+    <div class="content flex flex-col justify-center items-center p-3 bg-black/30 rounded-[10px]">
+        <div class="numcont flex flex-col gap-y-[10px] mb-5">
+            <input class="outline-black rounded-sm outline-[1px] bg-white w-75 p-2 h-10" type="text" id="text1">
+            <input class="outline-black rounded-sm outline-[1px] bg-white w-75 p-2 h-10" type="text" id="text2">
+        </div>
+
+        <section class="flex flex-row gap-[5px] translate-x-[70px]">
+            <button class="bg-red-600 rounded-[5px] text-white w-9 h-9 font-medium text-[17px]"
+                onclick="add()">+</button>
+            <button class="bg-red-600 rounded-[5px] text-white w-9 h-9 font-medium text-[17px]"
+                onclick="sub()">-</button>
+            <button class="bg-red-600 rounded-[5px] text-white w-9 h-9 font-medium text-[17px]"
+                onclick="multi()">*</button>
+            <button class="bg-red-600 rounded-[5px] text-white w-9 h-9 font-medium text-[17px]"
+                onclick="div()">/</button>
+        </section>
+
+        <!-- <button class="translate-x-[-70px] bg-gray-700 mt-5 rounded-[10px] text-white w-40 h-8 font-memedium text-[17px]">Total</button> -->
+
+        <span id="result" class="w-50 text-[17px] translate-x-[-50px] rounded-md font-medium text-black mt-6  bg-white p-2">Here is
+            your result</span>
+
+
+    </div>
+
+</body>
+
+<script>
+    const text1 = document.getElementById('text1');
+    const text2 = document.getElementById('text2');
+    const result = document.getElementById('result'); 
+
+
+    function add() {
+        let firstValue = text1.value;
+        let secValue = text2.value;
+        firstValue = Number(firstValue)
+        secValue = Number(secValue)
+        result.innerHTML = `${firstValue + secValue}`;
+    }
+
+    function sub() {
+        let firstValue = text1.value;
+        let secValue = text2.value;
+        firstValue = Number(firstValue)
+        secValue = Number(secValue)
+        result.innerHTML = `${firstValue - secValue}`;
+    }
+
+    function multi() {
+        let firstValue = text1.value;
+        let secValue = text2.value;
+        firstValue = Number(firstValue)
+        secValue = Number(secValue)
+        result.innerHTML = `${firstValue * secValue}`;
+    }
+
+    function div() {
+        let firstValue = text1.value;
+        let secValue = text2.value;
+        firstValue = Number(firstValue)
+        secValue = Number(secValue)
+        result.innerHTML = `${firstValue / secValue}`;
+    }
+
+
+
+
+</script>
+
+</html>

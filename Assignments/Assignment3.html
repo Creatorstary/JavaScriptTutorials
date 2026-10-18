@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-[500px] w-[100%] flex flex-col justify-center items-center">
+    <div>
+        <h1 class="text-[25px] font-medium mb-[30px]">Word Censor</h1>
+    </div>
+    <div class="w-[100%] h-auto flex flex-col justify-center gap-2 p-2">
+        <div class="w-[100%] flex justify-center items-center">
+            <textarea id="input"
+                class="h-[100px] w-[50%] overflow-hidden outline-1 text-wrap resize-none outline-black bg-white p-[5px]"
+                type="text"></textarea>
+        </div>
+        <div class="w-auto flex justify-center items-center">
+            <button onclick="filterInput()" class="bg-green-500 px-[15px] py-[5px] text-[20px]
+             text-white translate-x-[300px] hover:bg-green-600 active:bg-green-700">filter</button>
+        </div>
+
+    </div>
+    <div class="h-[auto] w-[50%] p-2 mt-[25px]">
+        <P id="output" class="w-[100%] font-[400]"></P>
+    </div>
+
+</body>
+
+<script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+
+    function filterInput() {
+        let inputValue = input.value;
+
+        filterWords = inputValue.replaceAll('shit', 'sh*t').replaceAll('idiot','id*it').replaceAll('fuck', 'f**k').replaceAll('imbecile', 'imbec*le').replaceAll('stupid', 'stup*d').replaceAll('crazy', 'cr*zy').replaceAll('fool','f**l')
+
+        // console.log(inputValue)
+        output.innerHTML = filterWords;
+    }
+
+
+</script>
+
+</html>
